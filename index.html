@@ -164,9 +164,18 @@
             padding: 0;
             margin: 0;
         }
-        .title-block, .greeting-text, .info-table, footer {
+        .title-block, .greeting-text, .info-block, .info-table tr, footer {
             break-inside: avoid;
         }
+    }
+
+    /* 画面表示・印刷どちらでも、INFORMATIONブロックが
+       見出しとテーブルの間で分割されないようにする */
+    .info-block {
+        break-inside: avoid;
+    }
+    .info-table tr {
+        break-inside: avoid;
     }
 </style>
 </head>
@@ -208,34 +217,36 @@
     <hr class="divider">
 
     <!-- 開催情報 -->
-    <h2 class="section-title">INFORMATION</h2>
-    <table class="info-table">
-        <tr>
-            <th>日時</th>
-            <td>
-                <strong>2026年11月7日(土)</strong><br>
-                受付：午前11:00 〜<br>
-                挙式：午前11:30 〜<br>
-                披露宴：午後12:30 〜
-            </td>
-        </tr>
-        <tr>
-            <th>会場</th>
-            <td>
-                <strong>アルカンシエル luxe mariage 名古屋</strong><br>
-                愛知県名古屋市西区牛島町4-1<br>
-                TEL: 052-561-2214
-            </td>
-        </tr>
-        <tr>
-            <th>アクセス</th>
-            <td>
-                地下鉄東山線・桜通線「名古屋駅」より徒歩5分<br>
-                JR「名古屋駅」桜通口より徒歩7分<br>
-                ※ルーセントアベニューL4出口すぐ
-            </td>
-        </tr>
-    </table>
+    <div class="info-block">
+        <h2 class="section-title">INFORMATION</h2>
+        <table class="info-table">
+            <tr>
+                <th>日時</th>
+                <td>
+                    <strong>2026年11月7日(土)</strong><br>
+                    受付：午前11:00 〜<br>
+                    挙式：午前11:30 〜<br>
+                    披露宴：午後12:30 〜
+                </td>
+            </tr>
+            <tr>
+                <th>会場</th>
+                <td>
+                    <strong>アルカンシエル luxe mariage 名古屋</strong><br>
+                    愛知県名古屋市西区牛島町4-1<br>
+                    TEL: 052-561-2214
+                </td>
+            </tr>
+            <tr>
+                <th>アクセス</th>
+                <td>
+                    地下鉄東山線・桜通線「名古屋駅」より徒歩5分<br>
+                    JR「名古屋駅」桜通口より徒歩7分<br>
+                    ※ルーセントアベニューL4出口すぐ
+                </td>
+            </tr>
+        </table>
+    </div>
 
     <footer>
         &copy; 2026 Kazuki &amp; Mana
